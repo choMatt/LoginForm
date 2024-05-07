@@ -28,3 +28,10 @@
   #root, #__next {
     isolation: isolate;
   }
+
+  body{
+    background-image: url("../assets/spacejoy-YI2YkyaREHk-unsplash.jpg");
+    background-repeat: no-repeat;
+    background-position: center -800px;
+    background-size: 2230px;
+  }
