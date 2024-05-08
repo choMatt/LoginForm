@@ -8,32 +8,44 @@
     position: absolute;
     right: 0;
     top:0;
+    
+    transition: transform 500ms ease;
 }
 
-  .title {
-    /* Styles for the title */
-  }
-  
-  .emailInput {
-    /* Styles for the email input field */
-  }
-  
-  .passwordInput {
-    /* Styles for the password input field */
-  }
-  
-  .submitButton {
-    /* Styles for the submit button */
-  }
-  
-  .createAccountButton {
-    /* Styles for the create account button */
-  }
-  
-  .forgotPassword {
-    /* Styles for the forgot password link */
-  }
-  
-  .loginLink {
-    /* Styles for the login link */
-  }
+/* animation */
+
+.container_closed{
+    transform: translateX(100%);
+}
+
+.container_open{
+    transform: translateX(0%);
+}
+
+.title {
+/* Styles for the title */
+}
+
+.emailInput {
+/* Styles for the email input field */
+}
+
+.passwordInput {
+/* Styles for the password input field */
+}
+
+.submitButton {
+/* Styles for the submit button */
+}
+
+.createAccountButton {
+/* Styles for the create account button */
+}
+
+.forgotPassword {
+/* Styles for the forgot password link */
+}
+
+.loginLink {
+/* Styles for the login link */
+}
