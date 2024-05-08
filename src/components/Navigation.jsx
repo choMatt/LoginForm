@@ -2,7 +2,7 @@ import { useState } from 'react'
 import React from "react";
 import NavigationCSS from "../styles/Navigation.module.css";
 
-export default function Navigation() {
+export default function Navigation(props) {
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   function handleClick() {
@@ -43,8 +43,8 @@ export default function Navigation() {
         <li className={NavigationCSS.item}>
           <a href="">register</a>
         </li>
-        <li className={NavigationCSS.item}>
-          <a href="">login</a>
+        <li className={NavigationCSS.item} onClick={props.handleClick}>
+          <a href="#">login</a>
         </li>
       </ul>
     </nav>
