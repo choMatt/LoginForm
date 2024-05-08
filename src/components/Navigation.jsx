@@ -3,6 +3,17 @@ import React from "react";
 import NavigationCSS from "../styles/Navigation.module.css";
 
 export default function Navigation(props) {
+  const {
+    container, 
+    logo, 
+    list, 
+    list_is_expanded,
+    line, 
+    item, 
+    burgerIcon, 
+    burger
+  } = NavigationCSS
+  
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   function handleClick() {
@@ -10,14 +21,14 @@ export default function Navigation(props) {
   }
 
   return (
-    <nav className={NavigationCSS.container}>
-      <h1 className={NavigationCSS.logo}>HAUSIFY</h1>
+    <nav className={container}>
+      <h1 className={logo}>HAUSIFY</h1>
 
-      <div className={NavigationCSS.burgerIcon}>
-        <label className={NavigationCSS.burger} htmlFor="burger">
+      <div className={burgerIcon}>
+        <label className={burger} htmlFor="burger">
           <input
             onClick={handleClick}
-            className={NavigationCSS.line}
+            className={line}
             type="checkbox"
             id="burger"
           />
@@ -25,25 +36,25 @@ export default function Navigation(props) {
       </div>
 
       <ul
-        className={`${NavigationCSS.list} 
-        ${isNavOpen ? NavigationCSS.list_open : NavigationCSS.list_closed}`}
+        className={`${list} 
+        ${isNavOpen && list_is_expanded}`}
       >
-        <li className={NavigationCSS.item}>
+        <li className={item}>
           <a href=""> custom builds </a>
         </li>
-        <li className={NavigationCSS.item}>
+        <li className={item}>
           <a href=""> new listings </a>
         </li>
-        <li className={NavigationCSS.item}>
+        <li className={item}>
           <a href=""> contact us </a>
         </li>
 
-        <hr className={NavigationCSS.line}/>
+        <hr className={line}/>
 
-        <li className={NavigationCSS.item}>
+        <li className={item}>
           <a href="">register</a>
         </li>
-        <li className={NavigationCSS.item} onClick={props.handleClick}>
+        <li className={item} onClick={props.toggleLogin}>
           <a href="#">login</a>
         </li>
       </ul>
