@@ -1,8 +1,9 @@
+import { useState } from 'react'
 import React from "react";
 import NavigationCSS from "../styles/Navigation.module.css";
 
 export default function Navigation() {
-  const [isNavOpen, setIsNavOpen] = React.useState(false);
+  const [isNavOpen, setIsNavOpen] = useState(false);
 
   function handleClick() {
     setIsNavOpen((prevValue) => !prevValue);
@@ -13,7 +14,7 @@ export default function Navigation() {
       <h1 className={NavigationCSS.logo}>HAUSIFY</h1>
 
       <div className={NavigationCSS.burgerIcon}>
-        <label className={NavigationCSS.burger} for="burger">
+        <label className={NavigationCSS.burger} htmlFor="burger">
           <input
             onClick={handleClick}
             className={NavigationCSS.line}
