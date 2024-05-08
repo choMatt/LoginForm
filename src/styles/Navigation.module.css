@@ -32,8 +32,7 @@
     gap: 10px;
     justify-content: center;
     text-transform: capitalize;
-    list-style: none;
-    padding: 0px 0px 0px 10px;
+    padding: 0px 10px 0px 10px;
     width: 100%;
     background-color: rgb(255, 255, 255);
     transition: transform 500ms;
@@ -66,7 +65,12 @@
       z-index: unset;
       height: unset;
     }
+
+    .line{
+      display: none;
+    }
   }
+
   
   .item {
     list-style: none;

@@ -37,6 +37,8 @@ export default function Navigation() {
           <a href=""> contact us </a>
         </li>
 
+        <hr className={NavigationCSS.line}/>
+
         <li className={NavigationCSS.item}>
           <a href="">register</a>
         </li>
