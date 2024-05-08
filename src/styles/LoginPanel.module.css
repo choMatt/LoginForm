@@ -1,0 +1,11 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+    max-width: 708px;
+    background-color: white;
+    position: absolute;
+    right: 0;
+    top:0;
+}
+
+
