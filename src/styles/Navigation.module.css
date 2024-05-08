@@ -6,7 +6,7 @@
     font-family: "Montserrat", sans-serif;
     font-style: normal;
     color: black;
-    background-color: white;
+    background-color: #FAF5F2;
     position: relative;
     height: 55px; /* Common height for container */
   }
@@ -34,10 +34,10 @@
     text-transform: capitalize;
     padding: 0px 10px 0px 10px;
     width: 100%;
-    background-color: rgb(255, 255, 255);
+    background-color: #FAF5F2;
     transition: transform 500ms;
     font-size: 1.20rem;
-    height: 200px;
+    height: 220px;
     position: absolute;
     z-index: -1;
   }
@@ -47,7 +47,7 @@
   }
   
   .list_open {
-    transform: translateY(26%);
+    transform: translateY(25%);
   }
   
   @media (min-width: 926px) {
