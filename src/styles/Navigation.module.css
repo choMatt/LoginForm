@@ -40,13 +40,10 @@
     height: 220px;
     position: absolute;
     z-index: -1;
-  }
-  
-  .list_closed {
     transform: translateY(-100%);
   }
   
-  .list_open {
+  .list_is_expanded {
     transform: translateY(25%);
   }
   
