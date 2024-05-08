@@ -2,22 +2,27 @@ import { useState } from 'react'
 import './styles/global.css'
 import Navigation  from "./components/Navigation"
 import LoginPanel from "./components/LoginPanel"
+import BackDrop from "./components/BackDrop"
 
 function App() {
-  const [isLoginPanelOpen, setIsLoginPanelOpen] = useState(false);
+  const [isLoginExpanded, setIsLoginExpanded] = useState(false);
 
-  function handleClick(){
-    setIsLoginPanelOpen((prevValue) => !prevValue)
+  function toggleLogin(){
+    setIsLoginExpanded((prevValue) => !prevValue)
   }
 
   return (
     <div>
       <Navigation
-        handleClick={handleClick}
+        toggleLogin={toggleLogin}
       />
       <main>
+        <BackDrop 
+          toggleLogin={toggleLogin}
+          isLoginExpanded={isLoginExpanded}
+        />
         <LoginPanel
-          isLoginPanelOpen={isLoginPanelOpen}
+          isLoginExpanded={isLoginExpanded}
         />
       </main>
     </div>
