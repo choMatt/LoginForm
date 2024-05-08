@@ -4,13 +4,21 @@ import Navigation  from "./components/Navigation"
 import LoginPanel from "./components/LoginPanel"
 
 function App() {
-  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isLoginPanelOpen, setIsLoginPanelOpen] = useState(false);
+
+  function handleClick(){
+    setIsLoginPanelOpen((prevValue) => !prevValue)
+  }
 
   return (
     <div>
-      <Navigation/>
+      <Navigation
+        handleClick={handleClick}
+      />
       <main>
-        <LoginPanel/>
+        <LoginPanel
+          isLoginPanelOpen={isLoginPanelOpen}
+        />
       </main>
     </div>
   )
