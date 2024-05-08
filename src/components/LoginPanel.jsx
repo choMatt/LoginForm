@@ -3,20 +3,30 @@ import React from "react";
 import LoginPanelCSS from "../styles/LoginPanel.module.css";
 
 export default function LoginPanel() {
-  const { container, title } = LoginPanelCSS;
+    
+const {
+    container,
+    title,
+    emailInput,
+    passwordInput,
+    createAccountButton,
+    forgotPassword,
+    loginLink,
+} = LoginPanelCSS;
+
   const [formData, setFormData] = useState({
     email: "",
     password: "",
-  })
+  });
 
-  function handleChange(event){
-    const { value, name } = event.target
+  function handleChange(event) {
+    const { value, name } = event.target;
     setFormData((prevFormData) => {
-        return {
-            ...prevFormData,
-            [name] : value
-        }
-    })
+      return {
+        ...prevFormData,
+        [name]: value,
+      };
+    });
   }
 
   return (
@@ -26,6 +36,7 @@ export default function LoginPanel() {
       <form>
         <label htmlFor="email">Email Address:</label>
         <input
+          className={emailInput}
           type="email"
           id="email"
           name="email"
@@ -34,16 +45,20 @@ export default function LoginPanel() {
         />
         <label htmlFor="password">Password:</label>
         <input
+          className={passwordInput}
           type="password"
           id="password"
           name="password"
           onChange={handleChange}
           required
         />
-        <input type="submit" value="Submit" />
 
-        <button>create an account</button>
+        <button className={createAccountButton}>create an account</button>
       </form>
+      <span className={forgotPassword}>forgot password</span>
+      <span className={loginLink}>
+        already have an account login
+      </span>
     </section>
   );
 }
