@@ -2,10 +2,12 @@ import { useState } from 'react'
 import React from "react";
 import LoginPanelCSS from "../styles/LoginPanel.module.css";
 
-export default function LoginPanel() {
+export default function LoginPanel(props) {
     
 const {
     container,
+    container_open,
+    container_closed,
     title,
     emailInput,
     passwordInput,
@@ -30,7 +32,7 @@ const {
   }
 
   return (
-    <section className={container}>
+    <section className={`${container} ${props.isLoginPanelOpen ? container_open : container_closed}`}>
       <h1 className={title}>building your dream home</h1>
 
       <form>
