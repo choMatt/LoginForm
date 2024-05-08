@@ -32,7 +32,7 @@ const {
   }
 
   return (
-    <section className={`${container} ${props.isLoginPanelOpen ? container_open : container_closed}`}>
+    <section className={`${container} ${props.isLoginExpanded ? container_open : container_closed}`}>
       <h1 className={title}>building your dream home</h1>
 
       <form>
